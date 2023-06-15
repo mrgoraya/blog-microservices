@@ -33,6 +33,12 @@ app.post("/posts", async (req, res) => {
   res.status(201).send(posts[id]);
 });
 
+app.post("/events", (req, res) => {
+  console.log("Received event", req.body.type);
+
+  res.send({});
+});
+
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
 });
